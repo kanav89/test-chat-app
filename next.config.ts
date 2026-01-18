@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
-
-if (!process.env.ANTHROPIC_API_KEY) {
-  throw new Error("ANTHROPIC_API_KEY environment variable is required");
-}
+// Validate environment variables at build time
+import "./env";
 
 const nextConfig: NextConfig = {
   /* config options here */
